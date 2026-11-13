@@ -7,7 +7,7 @@ let selectedRoom = '';
 
 async function init() {
   try {
-    const response = await fetch('/data/ITInfo.json');
+    const response = await fetch('../data/ITInfo.json');
     const data = await response.json();
 
     maps = data.maps;

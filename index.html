@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101827">
   <title>FWInfo | School Navigator</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <!-- Fixed path: removed ../ -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
@@ -23,8 +24,6 @@
           <select id="school">
             <option value="IT">IT Campus</option>
             <option value="BMA">BMA rooms (IT map)</option>
-            <option value="BMA-Aero">BMA rooms (Aero map)</option>
-            <option value="BMA-Bio">BMA rooms (Bio map)</option>
             <option value="Aero">Aerospace (Aero)</option>
             <option value="Bio">Biotechnology (Bio)</option>
           </select>
@@ -32,16 +31,16 @@
         <div>
           <label for="floor">Floor</label>
           <select id="floor">
-            <option value="1">1st Floor · Elevator Floor 2</option>
-            <option value="2">2nd Floor · Elevator Floor 3</option>
-            <option value="3">3rd Floor · Elevator Floor 4</option>
+            <option value="1">1st Floor</option>
+            <option value="2" selected>2nd Floor</option>
+            <option value="3">3rd Floor</option>
           </select>
         </div>
         <div>
           <label for="period">Class period</label>
           <select id="period">
             <option>Before school</option>
-            <option>Period 1</option>
+            <option selected>Period 1</option>
             <option>Period 2</option>
             <option>Period 3</option>
             <option>Period 4</option>
@@ -59,7 +58,7 @@
         <button class="chip" data-view="schedule">Teacher schedule</button>
         <button class="chip" data-view="scan">Scan QR</button>
       </div>
-      <p class="notice">Search by teacher name, classroom, or subject to find IT assignments from the uploaded teacher spreadsheet.</p>
+      <p class="notice">Search by teacher name, classroom, or subject to find IT assignments from the teacher database.</p>
     </section>
 
     <!-- Rooms Directory View -->
@@ -72,15 +71,15 @@
     <section class="panel hidden" id="mapView">
       <h2 id="mapTitle">Floor map</h2>
       <div class="mapwrap">
-        <img id="mapImage" alt="Uploaded school floor map">
+        <img id="mapImage" alt="School floor map">
       </div>
-      <p class="notice">Map image is a reference. For turn-by-turn directions, we will need a cleaner floor plan with connected hallways and verified entrances.</p>
+      <p class="notice">Map image is a reference for hallway layouts and room placement.</p>
     </section>
 
     <!-- Teacher Schedule View -->
     <section class="panel hidden" id="scheduleView">
       <h2>Teacher / classroom schedule</h2>
-      <div id="roomInfo" class="result">Search for a room to view its information.</div>
+      <div id="roomInfo" class="result">Search for a room or select one from the directory to view its information.</div>
       <table class="schedule">
         <thead>
           <tr>
@@ -89,20 +88,21 @@
             <th>Subject / class</th>
           </tr>
         </thead>
-        <tbody id="scheduleBody"></tbody>
+        <tbody id="scheduleBody">
+          <tr><td colspan="3" class="muted">No room selected.</td></tr>
+        </tbody>
       </table>
     </section>
 
     <!-- QR Code Scan View -->
     <section class="panel hidden" id="scanView">
       <h2>Scan a classroom QR code</h2>
-      <p class="muted">For the first version, scan the QR code printed on a classroom door using your phone camera. The QR code should open this app with a room number, such as <span class="tag">?room=I319</span>.</p>
-      <label for="roomCode">Or enter the room code</label>
+      <p class="muted">Scan the QR code printed on a classroom door using your phone camera, or enter the room code directly below.</p>
+      <label for="roomCode">Enter room code</label>
       <div class="searchrow">
         <input id="roomCode" placeholder="Example: I319">
         <button id="openRoom">Open room</button>
       </div>
-      <p class="notice">Live camera scanning can be added later; QR links work on iPhones and Android phones without requiring camera recognition inside the app.</p>
     </section>
 
     <!-- Room Details Section -->
@@ -114,13 +114,13 @@
     <!-- Database Info Section -->
     <section class="panel">
       <h2>IT teacher database</h2>
-      <p class="muted">Loaded from the IT teacher spreadsheet. Search by teacher name, classroom, or subject. Schedule information is shown for Periods 1–4.</p>
-      <p class="notice">73 schedule entries loaded. Confirm the spreadsheet details with school staff before sharing publicly.</p>
+      <p class="muted">Loaded from `ITInfo.json`. Search by teacher name, classroom, or subject to instantly view schedules across Periods 1–4.</p>
     </section>
 
-    <div class="footer">FWInfo prototype · Built from the floor-map images you provided · Verify all room and schedule information with school staff.</div>
+    <div class="footer">FWInfo prototype · Built with modular JSON data & assets.</div>
   </main>
 
-  <script src="/js/script.js"></script>
+  <!-- Fixed path: removed ../ -->
+  <script src="js/script.js"></script>
 </body>
 </html>
