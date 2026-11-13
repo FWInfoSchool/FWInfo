@@ -1,31 +1,24 @@
 const $ = id => document.getElementById(id);
 
-let maps = {};
-let roomData = {};
-let records = [];
+// Load data directly from the global variable exported by ITInfoData.js
+const data = window.ITData || {};
+let maps = data.maps || {};
+let roomData = data.roomData || {};
+let records = data.records || [];
 let selectedRoom = '';
 
-async function init() {
-  try {
-    const response = await fetch('../data/ITInfo.json');
-    const data = await response.json();
-
-    maps = data.maps;
-    roomData = data.roomData;
-    records = data.records;
-
-    // Set up shared campus aliases just like the original file
-    roomData.BMA = roomData.IT;
+function init() {
+  // Set up shared campus aliases just like the original file
+  if (roomData.IT) roomData.BMA = roomData.IT;
+  if (maps.IT) {
     maps.BMA = maps.IT;
-    maps['BMA-Aero'] = maps.Aero;
-    maps['BMA-Bio'] = maps.Bio;
-
-    setupEventListeners();
-    checkUrlParams();
-    updateUI();
-  } catch (err) {
-    console.error('Failed to load ITInfo.json:', err);
   }
+  if (maps.Aero) maps['BMA-Aero'] = maps.Aero;
+  if (maps.Bio) maps['BMA-Bio'] = maps.Bio;
+
+  setupEventListeners();
+  checkUrlParams();
+  updateUI();
 }
 
 function setupEventListeners() {

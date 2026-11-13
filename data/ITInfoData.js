@@ -1,19 +1,19 @@
-{
+window.ITData = {
   "maps": {
     "IT": {
-      "1": "../assets/img/it-floor-1.jpg",
-      "2": "../assets/img/it-floor-2.jpg",
-      "3": "../assets/img/it-floor-3.jpg"
+      "1": "assets/img/it-floor-1.png",
+      "2": "assets/img/it-floor-2.png",
+      "3": "assets/img/it-floor-3.png"
     },
     "Aero": {
-      "1": "../assets/img/aero-floor-1.jpg",
-      "2": "../assets/img/aero-floor-2.jpg",
-      "3": "../assets/img/aero-floor-3.jpg"
+      "1": "assets/img/aero-floor-1.png",
+      "2": "assets/img/aero-floor-2.png",
+      "3": "assets/img/aero-floor-3.png"
     },
     "Bio": {
-      "1": "../assets/img/bio-floor-1.jpg",
-      "2": "../assets/img/bio-floor-2.jpg",
-      "3": "../assets/img/bio-floor-3.jpg"
+      "1": "assets/img/bio-floor-1.png",
+      "2": "assets/img/bio-floor-2.png",
+      "3": "assets/img/bio-floor-3.png"
     }
   },
   "roomData": {
@@ -173,4 +173,4 @@
     {"school": "IT", "room": "Principle/Storage", "period": "Period 3", "teacher": "Johnson&Jennifer", "subject": ""},
     {"school": "IT", "room": "Principle/Storage", "period": "Period 4", "teacher": "Johnson&Jennifer", "subject": ""}
   ]
-}
+};
