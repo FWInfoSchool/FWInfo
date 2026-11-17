@@ -12,6 +12,13 @@
   box-sizing: border-box;
 }
 
+.brand img.logo-image {
+  height: 64px; /* Adjust this height to fit your logo */
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
 body {
   margin: 0;
   background: var(--bg);
