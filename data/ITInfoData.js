@@ -1,19 +1,19 @@
 window.ITData = {
   "maps": {
     "IT": {
-      "1": "assets/img/it-floor-1.png",
-      "2": "assets/img/it-floor-2.png",
-      "3": "assets/img/it-floor-3.png"
+      "1": "assets/img/it-floor-1.jpg",
+      "2": "assets/img/it-floor-2.jpg",
+      "3": "assets/img/it-floor-3.jpg"
     },
     "Aero": {
-      "1": "assets/img/aero-floor-1.png",
-      "2": "assets/img/aero-floor-2.png",
-      "3": "assets/img/aero-floor-3.png"
+      "1": "assets/img/aero-floor-1.jpg",
+      "2": "assets/img/aero-floor-2.jpg",
+      "3": "assets/img/aero-floor-3.jpg"
     },
     "Bio": {
-      "1": "assets/img/bio-floor-1.png",
-      "2": "assets/img/bio-floor-2.png",
-      "3": "assets/img/bio-floor-3.png"
+      "1": "assets/img/bio-floor-1.jpg",
+      "2": "assets/img/bio-floor-2.jpg",
+      "3": "assets/img/bio-floor-3.jpg"
     }
   },
   "roomData": {

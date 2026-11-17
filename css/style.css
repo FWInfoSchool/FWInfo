@@ -93,12 +93,13 @@ button.secondary {
 
 .searchrow {
   display: flex;
+  flex-direction: column;
   gap: 8px;
   margin-top: 12px;
 }
 
 .searchrow input {
-  flex: 1;
+  flex: 1 1 auto;
   min-width: 0;
 }
 
